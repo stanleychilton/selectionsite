@@ -1,0 +1,16 @@
+#sides{
+	background-color: #004289;
+}
+#main{
+	background-color: #004289;
+}
+.contain{
+	min-height: 100%;
+}
+p.round3 {
+  border: 2px solid #E4A024;
+  border-radius: 12px;
+}
+body{
+	background-color: #004289;
+}
