@@ -24,15 +24,18 @@ $conn    = Connect();
 				</div>
                 <div id='main' class="col-md-6 col-md-offset-0" style = 'padding-right: 0px;padding-left: 0px;'>
 					<div class="contain">
-						<?php
-							for($i=0;$i<=10;$i++){
-								echo"<div class='row round3'><div id='sides' class='col-md-6'>";
-								echo"instance-".($i+1)."</div>";
-								echo"<div id='sides' class='col-md-6'><button class='button1'>select</button>";
-								echo"</div></div><br>";
-							}
+						<form id="chardiv" action="" method="post"><br>
+							<p>Email: <input type="email" name="email" placeholder="Enter your email" required></p><br><br>
+							<?php
+								for($i=0;$i<=10;$i++){
+									echo"<div class='row round3'><div id='sides' class='col-md-6'>";
+									echo"instance-".($i+1)."</div>";
+									echo"<div id='sides' class='col-md-6'><input class='button' type='submit' name='submit' value='Submit'>";
+									echo"</div></div><br>";
+								}
 
-						?>
+							?>
+						</form>
 					</div>
 				
 				
