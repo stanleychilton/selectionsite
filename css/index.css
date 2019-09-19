@@ -7,10 +7,20 @@
 .contain{
 	min-height: 100%;
 }
-p.round3 {
+div round3 {
   border: 2px solid #E4A024;
   border-radius: 12px;
+  color: white;
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 body{
 	background-color: #004289;
+}
+button1{
+	text-align: right;
+}
+tr th{
+	  padding-right: 10px;
 }
