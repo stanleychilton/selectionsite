@@ -2,6 +2,8 @@
 require 'connect.php';
 $conn    = Connect();
 
+$email = 'Stanleychilton@live.com';
+
 ?>
 <!DOCTYPE html>
 <html lang="en" style = 'padding-right: 0px;'>
@@ -24,8 +26,8 @@ $conn    = Connect();
 				</div>
                 <div id='main' class="col-md-6 col-md-offset-0" style = 'padding-right: 0px;padding-left: 0px;'>
 					<div class="contain">
-						<form id="chardiv" action="" method="post"><br>
-							<p>Email: <input type="email" name="email" placeholder="Enter your email" required></p><br><br>
+					<p>Email: <?php echo $email; ?>
+					<br>
 							<?php
 							$sql = "SELECT id, active FROM instances WHERE active != 1";
 							$result = $conn->query($sql);
@@ -35,13 +37,12 @@ $conn    = Connect();
 								while($row = $result->fetch_assoc()) {
 									echo"<div class='row round3'><div id='sides' class='col-md-6'>";
 									echo"instance-".$row['id']."</div>";
-									echo"<div id='sides' class='col-md-6'><input class='button' type='submit' name='submit' value='Submit'>";
+									echo"<div id='sides' class='col-md-6'><a href='selection.php?id=".$row['id']."&email=".$email."' class='button' style='text-decoration:none;'>Select</a>";
 									echo"</div></div><br>";
 								}
 							}
 
 							?>
-						</form>
 					</div>
 				
 				

@@ -28,6 +28,10 @@ body{
 	font-size: 16px;
 	margin: 4px 2px;
 	cursor: pointer;
+	text-decoration:none;
+}
+.button:active, .button:hover{
+	color: #E4A024;
 }
 p{
 	color: white;
