@@ -29,7 +29,7 @@ $conn    = Connect();
 								echo"<div class='row round3'><div id='sides' class='col-md-6'>";
 								echo"instance-".($i+1)."</div>";
 								echo"<div id='sides' class='col-md-6'><button class='button1'>select</button>";
-								echo"</div></div>";
+								echo"</div></div><br>";
 							}
 
 						?>

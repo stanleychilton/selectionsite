@@ -4,10 +4,7 @@
 #main{
 	background-color: #004289;
 }
-.contain{
-	min-height: 100%;
-}
-div round3 {
+.round3 {
   border: 2px solid #E4A024;
   border-radius: 12px;
   color: white;
@@ -18,9 +15,7 @@ div round3 {
 body{
 	background-color: #004289;
 }
-button1{
-	text-align: right;
-}
-tr th{
-	  padding-right: 10px;
+div button{
+	float: right;
+    margin-right:10px;
 }
