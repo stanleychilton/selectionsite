@@ -7,4 +7,14 @@ $id = $_GET['id'];
 
 
 echo $email . $id;
+
+
+
+
+
+
+
+
+
+
 ?>

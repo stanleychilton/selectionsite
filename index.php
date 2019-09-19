@@ -8,7 +8,6 @@ $email = 'Stanleychilton@live.com';
 <!DOCTYPE html>
 <html lang="en" style = 'padding-right: 0px;'>
     <head>
-		
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 		<script src='https://www.google.com/recaptcha/api.js'></script>
@@ -21,7 +20,6 @@ $email = 'Stanleychilton@live.com';
             <div class="row" style="margin-right:0px;margin-left:0px">
 			
 				<div id='sides' class="col-md-3">
-				
 				
 				</div>
                 <div id='main' class="col-md-6 col-md-offset-0" style = 'padding-right: 0px;padding-left: 0px;'>
