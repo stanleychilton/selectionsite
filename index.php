@@ -27,12 +27,18 @@ $conn    = Connect();
 						<form id="chardiv" action="" method="post"><br>
 							<p>Email: <input type="email" name="email" placeholder="Enter your email" required></p><br><br>
 							<?php
-								for($i=0;$i<=10;$i++){
+							$sql = "SELECT id, active FROM instances WHERE active != 1";
+							$result = $conn->query($sql);
+
+							if ($result->num_rows > 0) {
+								// output data of each row
+								while($row = $result->fetch_assoc()) {
 									echo"<div class='row round3'><div id='sides' class='col-md-6'>";
-									echo"instance-".($i+1)."</div>";
+									echo"instance-".$row['id']."</div>";
 									echo"<div id='sides' class='col-md-6'><input class='button' type='submit' name='submit' value='Submit'>";
 									echo"</div></div><br>";
 								}
+							}
 
 							?>
 						</form>
