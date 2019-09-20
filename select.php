@@ -43,7 +43,8 @@ $email = $_POST['email'];
 							while($row = $result->fetch_assoc()) {
 								echo"<div class='row round3'><div id='sides' class='col-md-6'>";
 								echo"instance-".$row['id']."</div>";
-								echo"<div id='sides' class='col-md-6'><a href='selection.php?id=".$row['id']."&email=".$email."' class='button' style='text-decoration:none;'>Select</a>";
+								echo"<div id='sides' class='col-md-6'>";
+								echo"<a href='selection.php?id=".$row['id']."&email=".$email."' class='button' style='text-decoration:none;'>Select</a>";
 								echo"</div></div><br>";
 							}
 						}
@@ -52,14 +53,24 @@ $email = $_POST['email'];
 					</div>
 				<?php
 						}else{
-							?>
-							<p>you have already selected a instance</p>
+	
+							$sql = "SELECT first_name, last_name FROM students WHERE email='$email'";
+							$result = mysqli_query($conn,$sql);
+							$row = mysqli_fetch_array($result,MYSQLI_ASSOC);
+
+							$name = $row['first_name'] . " " . $row['last_name'];
 							
-							<?php
+							$sql = "SELECT instance_url FROM instances WHERE selected_by='$name'";
+							$result = mysqli_query($conn,$sql);
+							$row = mysqli_fetch_array($result,MYSQLI_ASSOC);
+							
+						echo "<p>".$row['instance_url']."</p>";
+							
 						}
 					}else{
 				?>
-				<p>you arent enrolled in this paper</p>
+				<p>You are not enrolled in this paper<br>
+				or this is not the email you enrolled with</p>
 					
 					
 				<?php
