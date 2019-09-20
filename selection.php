@@ -31,12 +31,4 @@ if ($conn->query($sql) === TRUE) {
 }
 
 header('Location: /selectionsite');
-
-
-
-
-
-
-
-
 ?>

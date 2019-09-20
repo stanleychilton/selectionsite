@@ -2,6 +2,8 @@
 require 'connect.php';
 $conn    = Connect();
 
+$email = $_POST['email'];
+
 ?>
 <!DOCTYPE html>
 <html lang="en" style = 'padding-right: 0px;'>
@@ -21,12 +23,49 @@ $conn    = Connect();
 				
 				</div>
                 <div id='main' class="col-md-6 col-md-offset-0" style = 'padding-right: 0px;padding-left: 0px;'>
+				<?php
+					$sql = "SELECT id, selected FROM students WHERE email='$email'";
+					$result = mysqli_query($conn,$sql);
+					$row = mysqli_fetch_array($result,MYSQLI_ASSOC);
+					
+					if(isset($row)){
+						if($row['selected'] == 0){
+				?>
 					<div class="contain">
-						<form action="select.php" method="post">
-							E-mail: <input type="email" name="email">
-							<input type="submit" name="submit" value="Submit">
-						</form>
+					<p>Email: <?php echo $email; ?>
+					<br>
+						<?php
+						$sql = "SELECT id, active FROM instances WHERE active != 1";
+						$result = $conn->query($sql);
+
+						if ($result->num_rows > 0) {
+							// output data of each row
+							while($row = $result->fetch_assoc()) {
+								echo"<div class='row round3'><div id='sides' class='col-md-6'>";
+								echo"instance-".$row['id']."</div>";
+								echo"<div id='sides' class='col-md-6'><a href='selection.php?id=".$row['id']."&email=".$email."' class='button' style='text-decoration:none;'>Select</a>";
+								echo"</div></div><br>";
+							}
+						}
+
+						?>
 					</div>
+				<?php
+						}else{
+							?>
+							<p>you have already selected a instance</p>
+							
+							<?php
+						}
+					}else{
+				?>
+				<p>you arent enrolled in this paper</p>
+					
+					
+				<?php
+					}
+				?>
+			
 				
 				
                 </div>
