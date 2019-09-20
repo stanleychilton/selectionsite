@@ -16,7 +16,13 @@ if ($conn->query($sql) === TRUE) {
     echo "Error updating record: " . $conn->error;
 }
 
-$sql = "UPDATE instances SET active=1 WHERE id=$id";
+$sql = "SELECT first_name, last_name FROM students WHERE email='$email'";
+$result = mysqli_query($conn,$sql);
+$row = mysqli_fetch_array($result,MYSQLI_ASSOC);
+
+$name = $row['first_name'] . " " . $row['last_name'];
+
+$sql = "UPDATE instances SET active=1, selected_by='$name' WHERE id=$id";
 
 if ($conn->query($sql) === TRUE) {
     echo "Record updated successfully";
