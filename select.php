@@ -41,16 +41,16 @@ $email = $_POST['email'];
 						if ($result->num_rows > 0) {
 							// output data of each row
 							while($row = $result->fetch_assoc()) {
-								$count = 1;
+								$x = 1;
 								if($row['active'] != 1){
 									echo"<div class='row round3'><div id='sides' class='col-md-6'>";
-									echo"instance-".$count."</div>";
+									echo"instance-".$x."</div>";
 									echo"<div id='sides' class='col-md-6'>";
 									echo"<a href='selection.php?id=".$row['id']."&email=".$email."' class='button' style='text-decoration:none;'>Select</a>";
 									echo"</div></div><br>";
-									$count += 1;
+									$x += 1;
 								}else{
-									$count += 1;
+									$x += 1;
 								}
 							}
 						}
