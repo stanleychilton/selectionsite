@@ -44,12 +44,13 @@ $email = $_POST['email'];
 								$count = 1;
 								if($row['active'] != 1){
 									echo"<div class='row round3'><div id='sides' class='col-md-6'>";
-									echo"instance-".$count++."</div>";
+									echo"instance-".$count."</div>";
 									echo"<div id='sides' class='col-md-6'>";
 									echo"<a href='selection.php?id=".$row['id']."&email=".$email."' class='button' style='text-decoration:none;'>Select</a>";
 									echo"</div></div><br>";
+									$count += 1;
 								}else{
-									$count++;
+									$count += 1;
 								}
 							}
 						}
