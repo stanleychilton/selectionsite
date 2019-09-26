@@ -48,8 +48,10 @@ $email = $_POST['email'];
 									echo"<div id='sides' class='col-md-6'>";
 									echo"<a href='selection.php?id=".$row['id']."&email=".$email."' class='button' style='text-decoration:none;'>Select</a>";
 									echo"</div></div><br>";
+									$count ++;
+								}else{
+									$count ++;
 								}
-								$count ++;
 							}
 						}
 
