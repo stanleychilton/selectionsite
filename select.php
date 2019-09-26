@@ -42,7 +42,7 @@ $email = $_POST['email'];
 							// output data of each row
 							while($row = $result->fetch_assoc()) {
 								$count = 1;
-								if(active != 1){
+								if($row['active'] != 1){
 									echo"<div class='row round3'><div id='sides' class='col-md-6'>";
 									echo"instance-".$count."</div>";
 									echo"<div id='sides' class='col-md-6'>";
