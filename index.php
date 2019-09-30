@@ -24,7 +24,7 @@ include('session.php');
                 <div id='main' class="col-md-6 col-md-offset-0" style = 'padding-right: 0px;padding-left: 0px;'>
 					<div class="contain">
 						<form action="select.php" method="post">
-							E-mail: <input type="email" name="email">
+							Student ID: <input type="text" name="sid">
 							<input type="submit" name="submit" value="Submit">
 						</form>
 					</div>

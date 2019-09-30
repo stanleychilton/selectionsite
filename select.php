@@ -3,9 +3,12 @@ require 'connect.php';
 $conn    = Connect();
 include('session.php');
 
-$email = $_POST['email'];
-if(!isset($email)){
-	header("location: index.php");
+$sid = $_POST['sid'];
+if(!isset($sid)){
+	$sid = $_GET['sid'];
+	if(!isset($sid)){
+		header("location: index.php");
+	}
 }
 
 ?>
@@ -28,7 +31,7 @@ if(!isset($email)){
 				</div>
                 <div id='main' class="col-md-6 col-md-offset-0" style = 'padding-right: 0px;padding-left: 0px;'>
 				<?php
-					$sql = "SELECT id, selected FROM students WHERE email='$email'";
+					$sql = "SELECT id, selected FROM students WHERE id='$sid'";
 					$result = mysqli_query($conn,$sql);
 					$row = mysqli_fetch_array($result,MYSQLI_ASSOC);
 					
@@ -36,7 +39,7 @@ if(!isset($email)){
 						if($row['selected'] == 0){
 				?>
 					<div class="contain">
-					<p>Email: <?php echo $email; ?>
+					<p>student ID: <?php echo $sid; ?>
 					<br>
 						<?php
 						$sql = "SELECT id, active FROM instances WHERE active != 1";
@@ -48,7 +51,7 @@ if(!isset($email)){
 								echo"<div class='row round3'><div id='sides' class='col-md-6'>";
 								echo"instance-".$row['id']."</div>";
 								echo"<div id='sides' class='col-md-6'>";
-								echo"<a href='selection.php?id=".$row['id']."&email=".$email."' class='button' style='text-decoration:none;'>Select</a>";
+								echo"<a href='selection.php?id=".$row['id']."&sid=".$sid."' class='button' style='text-decoration:none;'>Select</a>";
 								echo"</div></div><br>";
 							}
 						}
@@ -58,7 +61,7 @@ if(!isset($email)){
 				<?php
 						}else{
 	
-							$sql = "SELECT first_name, last_name FROM students WHERE email='$email'";
+							$sql = "SELECT first_name, last_name FROM students WHERE id='$sid'";
 							$result = mysqli_query($conn,$sql);
 							$row = mysqli_fetch_array($result,MYSQLI_ASSOC);
 
@@ -72,7 +75,6 @@ if(!isset($email)){
 							
 						}
 					}else{
-					echo $login_session;
 				?>
 				<p>You are not enrolled in this paper<br>
 				or this is not the email you enrolled with</p>

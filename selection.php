@@ -2,13 +2,13 @@
 require 'connect.php';
 $conn    = Connect();
 
-$email = $_GET['email'];
+$sid = $_GET['sid'];
 $id = $_GET['id'];
 
 
 echo $email . $id;
 
-$sql = "UPDATE students SET selected=1 WHERE email='$email'";
+$sql = "UPDATE students SET selected=1 WHERE id='$sid'";
 
 if ($conn->query($sql) === TRUE) {
     echo "Record updated successfully";
@@ -16,7 +16,7 @@ if ($conn->query($sql) === TRUE) {
     echo "Error updating record: " . $conn->error;
 }
 
-$sql = "SELECT first_name, last_name FROM students WHERE email='$email'";
+$sql = "SELECT first_name, last_name FROM students WHERE id='$sid'";
 $result = mysqli_query($conn,$sql);
 $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
 
@@ -30,5 +30,5 @@ if ($conn->query($sql) === TRUE) {
     echo "Error updating record: " . $conn->error;
 }
 
-header('Location: /selectionsite');
+header('Location: /selectionsite/select.php?sid='.$sid);
 ?>
