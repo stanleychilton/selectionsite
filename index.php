@@ -3,9 +3,6 @@ require 'connect.php';
 $conn    = Connect();
 include('session.php');
 
-if(isset($login_session)){
-    header('Location: /selectionsite/select.php');
-}
 ?>
 <!DOCTYPE html>
 <html lang="en" style = 'padding-right: 0px;'>
@@ -26,7 +23,6 @@ if(isset($login_session)){
 				</div>
                 <div id='main' class="col-md-6 col-md-offset-0" style = 'padding-right: 0px;padding-left: 0px;'>
 					<div class="contain">
-					<?php echo $login_session;?>
 						<form action="select.php" method="post">
 							E-mail: <input type="email" name="email">
 							<input type="submit" name="submit" value="Submit">
