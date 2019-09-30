@@ -1,6 +1,7 @@
 <?php
 require 'connect.php';
 $conn    = Connect();
+include('session.php');
 
 $email = $_POST['email'];
 
@@ -68,6 +69,7 @@ $email = $_POST['email'];
 							
 						}
 					}else{
+					echo $login_session;
 				?>
 				<p>You are not enrolled in this paper<br>
 				or this is not the email you enrolled with</p>
