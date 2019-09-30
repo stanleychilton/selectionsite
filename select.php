@@ -36,17 +36,23 @@ $email = $_POST['email'];
 					<p>Email: <?php echo $email; ?>
 					<br>
 						<?php
-						$sql = "SELECT id, active FROM instances WHERE active != 1";
+						$sql = "SELECT id, active FROM instances";
 						$result = $conn->query($sql);
 
 						if ($result->num_rows > 0) {
 							// output data of each row
+							$x = 1;
 							while($row = $result->fetch_assoc()) {
-								echo"<div class='row round3'><div id='sides' class='col-md-6'>";
-								echo"instance-".$row['id']."</div>";
-								echo"<div id='sides' class='col-md-6'>";
-								echo"<a href='selection.php?id=".$row['id']."&email=".$email."' class='button' style='text-decoration:none;'>Select</a>";
-								echo"</div></div><br>";
+								
+								if($row['active'] != 1){
+									echo"<div class='row round3'><div id='sides' class='col-md-6'>";
+									echo"instance-".$x++."</div>";
+									echo"<div id='sides' class='col-md-6'>";
+									echo"<a href='selection.php?id=".$row['id']."&email=".$email."' class='button' style='text-decoration:none;'>Select</a>";
+									echo"</div></div><br>";
+								}else{
+									$x++;
+								}
 							}
 						}
 

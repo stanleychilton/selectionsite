@@ -7,9 +7,9 @@
 .round3 {
   border: 2px solid #E4A024;
   border-radius: 12px;
-  color: white;
   padding-left: 10px;
   padding-top: 10px;
+  color: white;
   padding-bottom: 10px;
 }
 body{
