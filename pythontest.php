@@ -2,11 +2,10 @@
 require 'connect.php';
 $conn    = Connect();
 include('session.php');
-
 $test = "";
-
 $par = "";
 $par2 = "";
+
    
    if (isset($_POST['get_details'])) {
 		if($_POST['start'] != null){
@@ -17,6 +16,14 @@ $par2 = "";
 		}
 		$test = exec("python test.py $par $par2");
 	}
+?>
+<?php
+$test1 = "";
+	
+	if (isset($_POST['update']))
+{	
+    $test1 = exec('python test2.py ');
+}
 ?>
 <html>
 	<head>
@@ -41,6 +48,12 @@ $par2 = "";
 							<input type="date" id="end" name="end">
 							<input type="submit" name="get_details" value="get costs">
 						</form>
+						<form name="update" method="post" >
+							<button name = "update" type="submit"> Predict Cost next month </button>
+						</form>
+						<?php
+							echo $test1;
+						?>
 						<?php
 							echo '<p>' . $test . '</p>';
 						?>
