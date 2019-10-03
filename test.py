@@ -1,14 +1,16 @@
 import sys, argparse, boto3, datetime
 
-input1 = ""#sys.argv[1]
-input2 = ""#sys.argv[2]
+input1 = (sys.argv[1]).replace("/", "-")
+input2 = (sys.argv[2]).replace("/", "-")
+
+print(input1)
 
 results = []
 testheader = []
 test = []
 
-start = '2019-09-01'
-end = '2019-09-29'
+start = input1
+end = input2
 
 
 
