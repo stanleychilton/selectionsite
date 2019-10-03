@@ -20,7 +20,7 @@ this repository contains a script that creates a website and the mysql data to g
 
 ### Setup
 
-1. Install boto3, and paramiko using the commands below in your command line.
+1. Install boto3 using the commands below in your command line.
    - `pip install boto3`
 2. Install awscli.
     - for windows using [AWScli (64bit)](https://s3.amazonaws.com/aws-cli/AWSCLI64PY3.msi) / [AWScli (32bit)](https://s3.amazonaws.com/aws-cli/AWSCLI32PY3.msi)
