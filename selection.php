@@ -8,7 +8,7 @@ $id = $_GET['id'];
 
 echo $sid . $id;
 
-$sql = "UPDATE students SET selected=1 WHERE id='$sid'";
+$sql = "UPDATE students SET selected=1 WHERE student_id='$sid'";
 
 if ($conn->query($sql) === TRUE) {
     echo "Record updated successfully";
@@ -16,7 +16,7 @@ if ($conn->query($sql) === TRUE) {
     echo "Error updating record: " . $conn->error;
 }
 
-$sql = "SELECT first_name, last_name FROM students WHERE id='$sid'";
+$sql = "SELECT first_name, last_name FROM students WHERE student_id='$sid'";
 $result = mysqli_query($conn,$sql);
 $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
 

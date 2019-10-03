@@ -34,7 +34,7 @@ if(!isset($sid)){
 				</div>
                 <div id='main' class="col-md-6 col-md-offset-0" style = 'padding-right: 0px;padding-left: 0px;'>
 				<?php
-					$sql = "SELECT id, selected FROM students WHERE id='$sid'";
+					$sql = "SELECT student_id, selected FROM students WHERE student_id='$sid'";
 					$result = mysqli_query($conn,$sql);
 					$row = mysqli_fetch_array($result,MYSQLI_ASSOC);
 					
@@ -64,7 +64,7 @@ if(!isset($sid)){
 				<?php
 						}else{
 	
-							$sql = "SELECT first_name, last_name FROM students WHERE id='$sid'";
+							$sql = "SELECT first_name, last_name FROM students WHERE student_id='$sid'";
 							$result = mysqli_query($conn,$sql);
 							$row = mysqli_fetch_array($result,MYSQLI_ASSOC);
 
