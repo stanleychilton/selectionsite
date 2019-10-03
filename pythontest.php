@@ -5,7 +5,6 @@ include('session.php');
 $test = "";
 $par = "";
 $par2 = "";
-
    
    if (isset($_POST['get_details'])) {
 		if($_POST['start'] != null){
@@ -23,6 +22,14 @@ $test1 = "";
 	if (isset($_POST['update']))
 {	
     $test = exec('python test2.py ');
+}
+?>
+<?php
+$test = "";
+	
+	if (isset($_POST['update1']))
+{	
+    $test = exec('python test4.py ');
 }
 ?>
 <html>
@@ -50,6 +57,9 @@ $test1 = "";
 						</form>
 						<form name="update" method="post" >
 							<button name = "update" type="submit"> Predict Cost next month </button>
+						</form>
+						<form name="update" method="post" >
+							<button name = "update1" type="submit"> Status Update </button>
 						</form>
 						<?php
 							echo '<p>' . $test . '</p>';
