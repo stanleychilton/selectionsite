@@ -29,5 +29,5 @@ this repository contains a script that creates a website and the mysql data to g
 5. import the mysql database from the file in the given folder.
 6. create a new user account on the database, (hostname = localhost) then add all this information to the connect.php file.
 7. if portforwarding this you can run the python script from [this repo](https://github.com/stanleychilton/ITproject) on any computer just make sure to change the address how ever if not portforwarding for the test you will need to change the url in the python scripts in [this repo](https://github.com/stanleychilton/ITproject) to localhost and run them on the same machine
-testing over a network can be tested using [this site](www.clicker-box.com/selectionsite/)
+testing over a network can be tested using [this site](http://www.clicker-box.com/selectionsite/)
 8.
