@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 20, 2019 at 01:38 AM
+-- Generation Time: Oct 04, 2019 at 12:45 AM
 -- Server version: 10.1.30-MariaDB
 -- PHP Version: 7.2.1
 
@@ -30,8 +30,9 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `instances` (
   `id` int(11) NOT NULL,
+  `instance_id` text NOT NULL,
   `instance_url` text NOT NULL,
-  `selected` text NOT NULL,
+  `selected_by` text NOT NULL,
   `active` int(11) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -39,10 +40,11 @@ CREATE TABLE `instances` (
 -- Dumping data for table `instances`
 --
 
-INSERT INTO `instances` (`id`, `instance_url`, `selected`, `active`) VALUES
-(1, 'www.instance1.com', '', 0),
-(2, 'www.instance2.com', '', 0),
-(3, 'www.instance3.com', '', 0);
+INSERT INTO `instances` (`id`, `instance_id`, `instance_url`, `selected_by`, `active`) VALUES
+(1, '0', 'www.instance1.com', 'stanley chilton', 1),
+(2, '0', 'www.instance2.com', '', 0),
+(3, '0', 'www.instance3.com', '', 0),
+(4, '0', 'www.intance4.com', '', 0);
 
 -- --------------------------------------------------------
 
@@ -52,6 +54,7 @@ INSERT INTO `instances` (`id`, `instance_url`, `selected`, `active`) VALUES
 
 CREATE TABLE `students` (
   `id` int(11) NOT NULL,
+  `student_id` int(11) NOT NULL,
   `first_name` text NOT NULL,
   `last_name` text NOT NULL,
   `email` text NOT NULL,
@@ -62,8 +65,9 @@ CREATE TABLE `students` (
 -- Dumping data for table `students`
 --
 
-INSERT INTO `students` (`id`, `first_name`, `last_name`, `email`, `selected`) VALUES
-(1, 'stanley', 'chilton', 'stanleychilton@live.com', 0);
+INSERT INTO `students` (`id`, `student_id`, `first_name`, `last_name`, `email`, `selected`) VALUES
+(1, 1, 'stanley', 'chilton', 'Stanleychilton@live.com', 1),
+(2, 0, 'John', 'Doe', 'joedoe@live.com', 0);
 
 --
 -- Indexes for dumped tables
@@ -89,13 +93,13 @@ ALTER TABLE `students`
 -- AUTO_INCREMENT for table `instances`
 --
 ALTER TABLE `instances`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `students`
 --
 ALTER TABLE `students`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
