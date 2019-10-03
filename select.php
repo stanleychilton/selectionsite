@@ -3,7 +3,10 @@ require 'connect.php';
 $conn    = Connect();
 include('session.php');
 
-$sid = $_POST['sid'];
+
+if (isset($_POST['sid'])){
+	$sid = $_POST['sid'];
+}
 if(!isset($sid)){
 	$sid = $_GET['sid'];
 	if(!isset($sid)){
@@ -67,15 +70,20 @@ if(!isset($sid)){
 
 							$name = $row['first_name'] . " " . $row['last_name'];
 							
-							$sql = "SELECT instance_url FROM instances WHERE selected_by='$name'";
+							$sql = "SELECT instance_url, instance_id FROM instances WHERE selected_by='$name'";
 							$result = mysqli_query($conn,$sql);
 							$row = mysqli_fetch_array($result,MYSQLI_ASSOC);
 							
-						echo "<p>".$row['instance_url']."</p>";
+							echo "<p>".$row['instance_url']."</p>";
+						
+							$test = exec("python test.py $row['instance_id']");
+							
+							echo $test;
 							
 						}
 					}else{
 				?>
+				<p>student ID: <?php echo $sid; ?>
 				<p>You are not enrolled in this paper<br>
 				or this is not the email you enrolled with</p>
 					

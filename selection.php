@@ -6,7 +6,7 @@ $sid = $_GET['sid'];
 $id = $_GET['id'];
 
 
-echo $email . $id;
+echo $sid . $id;
 
 $sql = "UPDATE students SET selected=1 WHERE id='$sid'";
 
@@ -23,6 +23,7 @@ $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
 $name = $row['first_name'] . " " . $row['last_name'];
 
 $sql = "UPDATE instances SET active=1, selected_by='$name' WHERE id=$id";
+
 
 if ($conn->query($sql) === TRUE) {
     echo "Record updated successfully";
