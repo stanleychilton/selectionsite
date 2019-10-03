@@ -22,7 +22,7 @@ $test1 = "";
 	
 	if (isset($_POST['update']))
 {	
-    $test1 = exec('python test2.py ');
+    $test = exec('python test2.py ');
 }
 ?>
 <html>
@@ -51,9 +51,6 @@ $test1 = "";
 						<form name="update" method="post" >
 							<button name = "update" type="submit"> Predict Cost next month </button>
 						</form>
-						<?php
-							echo $test1;
-						?>
 						<?php
 							echo '<p>' . $test . '</p>';
 						?>
