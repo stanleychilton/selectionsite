@@ -2,7 +2,7 @@
 
 ### Description
 
-this repository contains a script that creates a website and the mysql data to go with it plus merges/recieves data contained in [this repo](https://github.com/stanleychilton/ITproject) the best way to run this website is on a test server which i found xampp was the best way to run this.
+This repository contains all nessesary code for a website and the mysql data to go with it plus merges/recieves data contained in [this repo](https://github.com/stanleychilton/ITproject) the best way to run this website is on a test server which i found xampp was the best way to run this.
 
 **(installation guide below)**
 
@@ -26,10 +26,10 @@ this repository contains a script that creates a website and the mysql data to g
     - for windows using [AWScli (64bit)](https://s3.amazonaws.com/aws-cli/AWSCLI64PY3.msi) / [AWScli (32bit)](https://s3.amazonaws.com/aws-cli/AWSCLI32PY3.msi)
     - for linux/mac the pip command `pip install awscli`
 3. Install [xampp](https://www.apachefriends.org/index.html)
-4. navigate to the htdocs folder in the xampp file structure and paste all the website data.
-5. click mysql admin on the xampp control panel. create a database table called itproject. 
-6. import the mysql database from the file in the given folder.
-7. create a new user account on the database, (hostname = localhost) then add all this information to the connect.php file.
-8. if portforwarding this you can run the python script from [this repo](https://github.com/stanleychilton/ITproject) on any computer just make sure to change the address how ever if not portforwarding for the test you will need to change the url in the python scripts in [this repo](https://github.com/stanleychilton/ITproject) to localhost and run them on the same machine
+4. Navigate to the htdocs folder in the xampp file structure and paste all the website data.
+5. Click mysql admin on the xampp control panel. create a database table called itproject. 
+6. Import the mysql database from the file in the given folder.
+7. Create a new user account on the database, (hostname = localhost) then add all this information to the connect.php file.
+8. If portforwarding this you can run the python script from [this repo](https://github.com/stanleychilton/ITproject) on any computer just make sure to change the address how ever if not portforwarding for the test you will need to change the url in the python scripts in [this repo](https://github.com/stanleychilton/ITproject) to localhost and run them on the same machine
 testing over a network can be tested using [this site](http://www.clicker-box.com/selectionsite/)
 9.
