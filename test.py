@@ -5,15 +5,13 @@ input2 = sys.argv[2]
 
 test = []
 
-test.append(input1)
-test.append(input2)
 
-if test[0] == Null or test[1] == Null:
+if input1 == Null or inout2 == Null:
 	## script here to grab all data from the cost software
 else:
 	## code here to grab specific date data 
-	## test[0] is start date
-	## test[1] is end date
+	## input1 is start date
+	## input2 is end date
 	
 string  = ""
 for i in test:
