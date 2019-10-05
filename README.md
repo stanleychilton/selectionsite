@@ -17,6 +17,16 @@ This repository contains all nessesary code for a website and the mysql data to 
 3. **boto3** for python (install guide below)
 
 ---
+### AWScli Setup
+1. Create a new IAM user(This can be done in the userd tab in the My security credentials page)
+2. Once the user is created press the security credentials tab to access keys
+3. Press create access key 
+4. Save these 2 keys somewhere on your computer
+5. In the command Prompt enter 'aws configure'
+6. For access key and security key enter the 2 keys that you have saved
+7. For region enter the region your account is in
+8. For output format enter json
+9. You will now be able to access any aws cli commands 
 
 ### Setup
 
