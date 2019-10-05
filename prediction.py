@@ -3,15 +3,8 @@
 import boto3
 import datetime
 
-
     # Create a Cost Explorer client
 client = boto3.client('ce')
-
-
-
-
-
-
 
 response = client.get_cost_forecast(
     TimePeriod={
@@ -24,15 +17,8 @@ response = client.get_cost_forecast(
 
 )
 
-
-
-
-
 amount = response['ForecastResultsByTime'][0]['MeanValue']
 amount = float(amount)
 lines = "${:,.2f}".format(amount)
-
-
-
 
 print("Your predicted cost next month is: " + lines)
