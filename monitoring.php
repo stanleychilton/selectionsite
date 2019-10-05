@@ -2,7 +2,7 @@
 require 'connect.php';
 $conn    = Connect();
 include('session.php');
-$test = "";
+$msg = "";
 $par = "";
 $par2 = "";
    
@@ -13,19 +13,19 @@ $par2 = "";
 		if($_POST['end'] != null){
 			$par2 = $_POST['end'];
 		}
-		$test = exec("python costlist.py $par $par2");
+		$msg = exec("python costlist.py $par $par2");
 	}
 ?>
 <?php
 	if (isset($_POST['update']))
 {	
-    $test = exec('python prediction.py ');
+    $msg = exec('python prediction.py ');
 }
 ?>
 <?php
 	if (isset($_POST['update1']))
 {	
-    $test = exec('python state.py ');
+    $msg = exec('python state.py ');
 }
 ?>
 <html>
@@ -58,7 +58,7 @@ $par2 = "";
 							<button name = "update1" type="submit"> Status Update </button>
 						</form>
 						<?php
-							echo '<p>' . $test . '</p>';
+							echo '<p>' . $msg . '</p>';
 						?>
 					</div>
 				

@@ -16,6 +16,8 @@ end = input2
 
 if input1 == None or input2 == None:
 	test.append("nothing")
+	## expandable to be able to grab all data rather than just the
+	## data between the selected time periods
 	## script here to grab all data from the cost software
 else:
 	token = None

@@ -33,7 +33,7 @@ if(preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|c
       if($count == 1) {
         $_SESSION['login_user'] = $row['f_name'];
          
-         header("location: index.php");
+         header("location: monitoring.php");
       }else {
          $error = "Your Login Name or Password is invalid";
       }
