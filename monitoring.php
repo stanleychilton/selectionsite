@@ -13,23 +13,19 @@ $par2 = "";
 		if($_POST['end'] != null){
 			$par2 = $_POST['end'];
 		}
-		$test = exec("python test.py $par $par2");
+		$test = exec("python costlist.py $par $par2");
 	}
 ?>
 <?php
-$test1 = "";
-	
 	if (isset($_POST['update']))
 {	
-    $test = exec('python test2.py ');
+    $test = exec('python prediction.py ');
 }
 ?>
 <?php
-$test = "";
-	
 	if (isset($_POST['update1']))
 {	
-    $test = exec('python test4.py ');
+    $test = exec('python state.py ');
 }
 ?>
 <html>
