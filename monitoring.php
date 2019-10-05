@@ -39,6 +39,13 @@ $par2 = "";
 	<body style = 'padding-right: 0px;'>
 			
 		<div id="mainfield">
+		
+		
+		
+		<!--- nav bar code goes here --->
+		
+		
+		
 			<div class="row" style="margin-right:0px;margin-left:0px">
 			
 				<div id='sides' class="col-md-3">
