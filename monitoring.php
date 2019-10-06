@@ -48,7 +48,7 @@ $par2 = "";
 		
 		<ul>
 		  <li><a href="monitoring.php">Monitoring</a></li>
-		  <li><a href="login1.php">Chat</a></li>
+		  <li><a href="register.php">Chat</a></li>
 		  <li style="float:right"><a class="active" href="logout1.php">logout</a></li>
 		</ul>
 		
