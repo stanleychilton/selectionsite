@@ -12,7 +12,7 @@ test = []
 start = input1
 end = input2
 
-
+cd = boto3.client('ce')
 
 if input1 == None or input2 == None:
 	test.append("nothing")
