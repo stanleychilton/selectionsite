@@ -76,7 +76,7 @@ if(!isset($sid)){
 							
 							echo "<p>".$row['instance_url']."</p>";
 						
-							$msg = exec("python specificstatus.py". $row['instance_id']);
+							$msg = exec("python specificstatus.py ". $row['instance_id']);
 							
 							echo $msg;
 							
