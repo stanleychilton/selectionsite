@@ -12,7 +12,7 @@ $message = '';
 
 if(isset($_SESSION['user_id']))
 {
- header('location:index.php');
+ header('location:index1.php');
 }
 
 if(isset($_POST["register"]))
