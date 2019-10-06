@@ -49,5 +49,5 @@ testing over a network can be tested using [this site](http://www.clicker-box.co
 1. Click Admin on the xampp control panel to go to the database 
 2. Create a new database called chatroom
 3. Copy the sql queries from chat_database.sql and paste them into the sql section of the database
-4. Copy the 2 queries seperately from chat_database1.sql and paster them one by one into the sql section of the database
+4. Copy the 2 queries seperately from chat_database1.sql and paste them one by one into the sql section of the database
 5. Chatroom should be all setup now
