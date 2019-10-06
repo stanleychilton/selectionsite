@@ -37,7 +37,7 @@ p{
 	color: white;
 }
 table, th, td {
-  border: 1px solid black;
+  border: 1px solid white;
   border-collapse: collapse;
   padding-left: 5px;
   padding-right: 5px;
@@ -48,7 +48,7 @@ ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #333;
+  background-color: #004289;
 }
 
 li {
@@ -64,9 +64,13 @@ li a {
 }
 
 li a:hover:not(.active) {
-  background-color: #111;
+  background-color: #0767CF;
+  text-decoration: none;
+  color: white;
 }
 
-.active {
-  background-color: #4CAF50;
+a.active {
+  background-color: #E4A024;
+  text-decoration: none;
+  color: white;
 }

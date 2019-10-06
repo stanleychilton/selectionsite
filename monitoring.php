@@ -47,10 +47,9 @@ $par2 = "";
 		
 		
 		<ul>
-		  <li><a href="#home">Home</a></li>
-		  <li><a href="#news">News</a></li>
-		  <li><a href="#contact">Contact</a></li>
-		  <li style="float:right"><a class="active" href="#about">About</a></li>
+		  <li><a href="monitoring.php">Monitoring</a></li>
+		  <li><a href="login1.php">Chat</a></li>
+		  <li style="float:right"><a class="active" href="logout1.php">logout</a></li>
 		</ul>
 		
 		
