@@ -4,6 +4,8 @@
 
 This repository contains all nessesary code for a website and the mysql data to go with it plus merges/recieves data contained in [this repo](https://github.com/stanleychilton/ITproject) the best way to run this website is on a test server which i found xampp was the best way to run this.
 
+For students to access the website they must access the index.php file from the url and for the admins to access their seperate webpage they must access the login.php file in their url
+
 **(installation guide below)**
 
 
