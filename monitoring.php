@@ -6,6 +6,10 @@ $msg = "";
 $par = "";
 $par2 = "";
    
+   if(!isset($login_session)){
+	   header("location: login.php");
+   }
+   
    if (isset($_POST['get_details'])) {
 		if($_POST['start'] != null){
 			$par = $_POST['start'];
