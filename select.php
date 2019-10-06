@@ -78,6 +78,8 @@ if(!isset($sid)){
 						
 							$msg = exec("python specificstatus.py ". $row['instance_id']);
 							
+							echo "<a href = 'login1.php'>Chatroom</a>";
+							
 							echo $msg;
 							
 						}
